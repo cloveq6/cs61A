@@ -136,6 +136,13 @@ def permutations(seq):
     [['a', 'b'], ['b', 'a']]
     """
     "*** YOUR CODE HERE ***"
+    if len(seq) == 1: yield list(seq)
+    else:
+        for i in range(len(seq)):
+            part = seq[i+1:] + seq[:i]
+            part_seq = sorted(permutations(part))
+            for j in part_seq:
+                yield [seq[i]] + j
 
 
 def make_joint(withdraw, old_pass, new_pass):
