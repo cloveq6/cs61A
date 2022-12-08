@@ -28,6 +28,11 @@ if __name__ == '__main__':
                     print(expr.eval(global_env))
         except (SyntaxError, NameError, TypeError) as err:
             print(type(err).__name__ + ':', err)
+            
+        except (ZeroDivisionError) as arithmetic_err:
+            print('The divisor cannot be zero')
+            print('Error message:', arithmetic_err)
+            
         except (KeyboardInterrupt, EOFError):  # Ctrl-C, Ctrl-D
             print()  # blank line
             break  # exit while loop (and end program)
