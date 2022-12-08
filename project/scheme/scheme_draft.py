@@ -148,6 +148,37 @@ env = create_global_frame()
 
 # part 6:
 
-print(repr(scheme_read(Buffer(tokenize_lines(["''hello"])))))
+# print(repr(scheme_read(Buffer(tokenize_lines(["''hello"])))))
 # print(repr(scheme_read(Buffer(tokenize_lines(["'''(+ 1 2)"])))))
+
+
+# part 7
+
+# lst = Pair(1, Pair(2, Pair(3, nil)))
+# print(lst)
+# print(repr(lst))
+
+# case1
+
+# expressions = read_line("((+ 1 2) (* 1 2))")
+# print(expressions)
+# print(repr(expressions))
+
+# part 8
+# case 1
+# lambda_line = read_line("(lambda (a b c) ((a + 1) (b + 1) (c + 1)))")
+# print(repr(lambda_line))
+
+# Pair('lambda', Pair('para', ))
+# Pair(Pair('a', Pair('b', Pair('c', nil))), nil)
+
+# # case 2
+# lambda_line = read_line("(lambda (a b c) (+ a (* b c)))")
+# print(repr(lambda_line))
+
+
+# Pair('lambda', Pair('m', Pair(Pair('+', Pair('a', Pair(Pair('*', Pair('b', Pair('c', nil))), nil))), nil)))
+
+
+# part14
 
