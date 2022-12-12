@@ -17,4 +17,8 @@ try:
     x = 1 / 0
 except Exception as e:
     print('Error message:', e)
-    
+ 
+
+(let ((x 42)
+           (y (* x 10))) 
+       (list x y))
